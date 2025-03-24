@@ -7,6 +7,12 @@
         "laravel",
         "framework"
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nativephp-ios.composer.sh"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
