@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Lattice Multiplication Game</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
 <div class="container bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
     @include('flash')
-    <h1 class="text-2xl font-bold mb-4 text-center">Lattice Multiplication Practice</h1>
-    <p class="text-lg mb-6 text-center">Multiply TW {{ $topNumber }} × {{ $sideNumber }}</p>
+{{--    <h1 class="text-2xl font-bold mb-4 text-center">Lattice Multiplication Practice</h1>--}}
+    <p class="text-lg mb-6 text-center">Multiply {{ $topNumber }} × {{ $sideNumber }}</p>
     <form id="lattice-form" method="POST" action="{{ route('game.validate') }}" class="space-y-4">
         @csrf
         <input type="hidden" name="top_number" value="{{ $topNumber }}"/>
